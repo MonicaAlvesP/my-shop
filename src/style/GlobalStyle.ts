@@ -13,9 +13,12 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: #E9F1F2;
-    color: #333;
+    background-color: #f0f0f0;
   }
   
   body, input, button {
