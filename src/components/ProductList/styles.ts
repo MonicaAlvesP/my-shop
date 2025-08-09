@@ -5,7 +5,7 @@ export const Container = styled.main`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: stretch;
-  margin: 2rem;
+  margin-bottom: 8rem;
 
   & > * {
     flex: 1 300px;

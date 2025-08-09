@@ -11,13 +11,13 @@ export const Aside = styled.aside<AsideProps>`
   height: 100vh;
   transition: 0.5s;
   z-index: 1;
-
   width: 300px;
   background-color: #fff;
-
   padding: 2rem;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
-  `
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+`
 
 export const Title = styled.h1`
   font-size: 2rem;
@@ -29,7 +29,10 @@ export const CartList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  `;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+`;
 
 export const ProductItem = styled.li`
   color: #000000;
@@ -55,8 +58,9 @@ export const TotalPrice = styled.div`
   margin-top: 2rem;
   color: #000000;
   font-size: 1.5rem;
-
   span {
     font-weight: bold;
   }
+  /* Mantém o total sempre visível no final */
+  flex-shrink: 0;
 `;

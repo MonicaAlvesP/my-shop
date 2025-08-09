@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { ProductList } from "./components/ProductList";
 import { store } from "./redux/store";
 import Carrossel from "./components/Carroussel";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Header />
       <Carrossel />
       <ProductList />
+      <Footer />
     </Provider>
   )
 }

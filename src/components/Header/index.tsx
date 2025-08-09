@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import * as s from './styles';
 import { CiLogin, CiLogout, CiShoppingCart } from 'react-icons/ci'
 
@@ -11,6 +11,7 @@ import { FaSearch } from 'react-icons/fa';
 export const Header: React.FC = () => {
   const { user } = useSelector((rootReducer: RootReducer) => rootReducer.userReducer);
   const [showCart, setShowCart] = useState(false);
+  const cartTimeout = useRef<number | null>(null);
   const dispatch = useDispatch();
 
   const isLogged = user !== null;
@@ -50,11 +51,20 @@ export const Header: React.FC = () => {
           {isLogged ? <CiLogout /> : <CiLogin />}
         </s.ButtonAuth>
 
-        <s.ButtonCart onClick={() => setShowCart(!showCart)}>
+        <s.ButtonCart
+          onClick={() => setShowCart((prev) => !prev)}
+        >
           Carrinho <CiShoppingCart />
         </s.ButtonCart>
       </s.Content>
-      <Cart showCart={showCart} />
+      <div
+        onMouseLeave={() => {
+          cartTimeout.current = window.setTimeout(() => setShowCart(false), 200);
+        }}
+        style={{ position: 'relative', zIndex: 2 }}
+      >
+        <Cart showCart={showCart} />
+      </div>
     </s.Container>
   )
 }

@@ -18,7 +18,7 @@ export const Cart: React.FC<CartProps> = ({ showCart }) => {
   }, 0) : 0;
 
   return (
-    <s.Aside showCart={showCart}>
+    <s.Aside showCart={showCart} tabIndex={0}>
       <s.Title>Carrinho</s.Title>
       <s.CartList>
         {cart && cart.length > 0 ? (
