@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# My Shop 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido sendo guiada pelo professor **Alisson Silva** da Ada Tech, onde ele ensina tudo que é necessário no curso para criar aplicações modernas com React, Redux e Styled Components.
 
-Currently, two official plugins are available:
+## 📋 Sobre a aplicação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O **My Shop** é uma aplicação de e-commerce fictícia construída em React + Vite, com gerenciamento de estado usando Redux. O objetivo é simular uma loja virtual completa e funcional.
 
-## Expanding the ESLint configuration
+### ✨ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 🛍️ Visualizar catálogo de produtos com imagens, preços e avaliações
+- 🔍 Buscar produtos pelo nome em tempo real
+- ➕ Adicionar e remover produtos do carrinho
+- 🛒 Visualizar total do carrinho em sidebar interativa
+- 👤 Sistema de login/logout simulado
+- 📱 Interface responsiva e moderna
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Tecnologias utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React** - Biblioteca para construção de interfaces
+- **Redux Toolkit** - Gerenciamento de estado global
+- **Styled Components** - Estilização de componentes
+- **Vite** - Ferramenta de build rápida
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Como executar o projeto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone o repositório ```git clone <URL_DO_REPOSITORIO>```
+2. Instale as dependências com `npm install`
+3. Inicie o servidor de desenvolvimento com `npm run dev`
+4. Acesse a aplicação em `http://localhost:5173`
